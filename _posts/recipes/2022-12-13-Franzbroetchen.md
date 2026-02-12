@@ -3,7 +3,7 @@ layout: post
 title:  "Franzbrötchen"
 date:   2022-12-13 12:00:00 -0600
 categories: recipe
-description: Leckere Franzbrötchen mit Zimt-Zucker-Füllung.
+description: Leckere Franzbroetchen mit Zimt-Zucker-Füllung.
 tags: [Deutsch, Gebäck, Hefeteig]
 img: /recipes/Franzbrötchen.png
 author: Linnea (@backverbot)
