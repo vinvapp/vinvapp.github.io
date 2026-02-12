@@ -45,6 +45,10 @@ author: Vincent von Appen # Add name author (optional)
     - Linsenbolognese
     - Roucula, Eingelegete Tomaten, Pinienkerne, Parmesan
     - Schupfnudeln
+    - Olivenöl
+    - Mie Bratnudeln 
+    - Mit China Kohl
+    - Lasange 
 
 - Burger 
     - Vegane Petties:
@@ -73,6 +77,10 @@ author: Vincent von Appen # Add name author (optional)
     - Kartoffelpuffer
     - Bauernfrühstück/Bratkartoffeln
     - Rosmarinkartoffeln
+    - Kroketten
+    - Bratkartoffeln
+    - Ovenwedges (Heiß, mit Gewürzen und Quark)
+    - Süßkartoffel Chilli Sin Carne
 
 - Mitbringen 
   - Obazda
