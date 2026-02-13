@@ -80,17 +80,16 @@ discus_identifier: mr-brown # Add your discus identifier
 future: true
 
 # Paginate
-paginate: 6
-paginate_path: "/blog/page:num/"
+# paginate: 6
+# paginate_path: "/blog/page:num/"
 
-#paginate_multiple:
-#  - paginate: 6
-#    paginate_path: '/blog/page:num/'
-#    sub_dir: '/blog/'
-#  - paginate: 6
-#    paginate_path: '/recipes/page:num/'
-#    sub_dir: '/recipes/'
-
+paginate_multiple:
+  - paginate: 6
+    paginate_path: '/blog/page:num/'
+    sub_dir: '/blog/'
+  - paginate: 6
+    paginate_path: '/recipes/page:num/'
+    sub_dir: '/recipes/'
 # Build settings
 markdown: kramdown
 
@@ -102,16 +101,16 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
-include: [_pages]
-exclude: [
-  "node_modules", 
-  "gulpfile.js", 
-  "package.json", 
-  "yarn.lock", 
-  "package-lock.json", 
-  "assets/css/sass/",
-  "tags_list", 
-  "makefile"]
+# include: [_pages]
+# exclude: [
+#   "node_modules", 
+#   "gulpfile.js", 
+#   "package.json", 
+#   "yarn.lock", 
+#   "package-lock.json", 
+#   "assets/css/sass/",
+#   "tags_list", 
+#   "makefile"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
