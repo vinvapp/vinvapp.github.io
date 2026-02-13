@@ -1,10 +1,13 @@
 ---
 layout: home-page
+pagination:
+  enabled: true
+  category: recipe
+  permalink: '/page/:num/'
 ---
 
 <ol class="post-card-box clearfix">
-{% for post in site.posts %}
-    {% if post.categories contains 'recipe' %}
+{% for post in paginator.posts %}
     <li>
         <div class="post-card">
         <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
@@ -19,6 +22,5 @@ layout: home-page
 
         </div>
     </li>
-    {% endif %}
 {% endfor %}
 </ol>

@@ -79,24 +79,29 @@ discus_identifier: mr-brown # Add your discus identifier
 #Settings for the blog
 future: true
 
-# Paginate
-# paginate: 6
-# paginate_path: "/blog/page:num/"
+# Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
-paginate_multiple:
-  - paginate: 6
-    paginate_path: '/blog/page:num/'
-    sub_dir: '/blog/'
-  - paginate: 6
-    paginate_path: '/recipes/page:num/'
-    sub_dir: '/recipes/'
+# Autopages for categories (enables /blog/ and /recipes/ pagination)
+autopages:
+  enabled: true
+  categories:
+    enabled: true
+    layouts: ['autopage_category.html']
+    permalink: '/:cat/'
+
 # Build settings
 markdown: kramdown
 
 
 plugins:
-  - jekyll-paginate
-  - jekyll-paginate-multiple
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
