@@ -88,13 +88,15 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-# Autopages for categories (enables /blog/ and /recipes/ pagination)
+# Autopages for tags only (categories disabled to avoid conflicts with custom blog/recipes pages)
 autopages:
   enabled: true
   categories:
-    enabled: true
-    layouts: ['autopage_category.html']
-    permalink: '/:cat/'
+    enabled: false
+  tags:
+    enabled: true  
+    layouts: ['autopage_tags.html']
+    permalink: '/tag/:tag/'
 
 # Build settings
 markdown: kramdown
