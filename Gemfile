@@ -14,12 +14,10 @@ gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem "github-pages", group: :jekyll_plugins
-# If you have any plugins, put them here!
+# Note: github-pages gem already includes jekyll-feed, jekyll-sitemap, jekyll-redirect-from  
+# Only add plugins here that are NOT included with github-pages
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem 'jekyll-redirect-from'
+  # jekyll-paginate is included with github-pages, so we don't need to list it
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
