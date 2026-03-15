@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="site-content">
+  <div class="wrapper">
+    <div id="content" class="site-content__inner">
+      <section class="c-page">
+        <div class="c-page__header">
+          <h1 class="c-page__title">{{ page.autopages.display_name | default: page.title }}</h1>
+          <p class="c-page__subtitle">Posts tagged with "{{ page.autopages.display_name }}"</p>
+        </div>
+        
+        <div class="c-page__content">
+          {% assign posts_by_tag = site.posts | where_exp: "post", "post.tags contains page.autopages.tag" %}
+          
+          {% if posts_by_tag.size > 0 %}
+            <div class="c-posts">
+              {% for post in posts_by_tag %}
+                {% include recent-post.html %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p>No posts found with this tag.</p>
+          {% endif %}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
