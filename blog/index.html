@@ -1,13 +1,11 @@
 ---
 layout: home-page
-pagination:
-  enabled: true
-  category: Blog
-  permalink: '/page/:num/'
+title: Blog
 ---
 
 <ol class="post-card-box clearfix">
-  {% for post in paginator.posts %}
+  {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'Blog'" %}
+  {% for post in blog_posts limit: 12 %}
   <li>
     <div class="post-card">
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
@@ -22,6 +20,12 @@ pagination:
 
     </div>
   </li>
-{% endfor %}
+  {% endfor %}
 </ol>
+
+{% if blog_posts.size > 12 %}
+<div class="pagination clearfix">
+  <p class="note">Showing latest 12 blog posts</p>
+</div>
+{% endif %}
 

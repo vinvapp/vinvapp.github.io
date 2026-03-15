@@ -1,13 +1,11 @@
 ---
 layout: home-page
-pagination:
-  enabled: true
-  category: recipe
-  permalink: '/page/:num/'
+title: Recipes
 ---
 
 <ol class="post-card-box clearfix">
-{% for post in paginator.posts %}
+{% assign recipe_posts = site.posts | where: "categories", "recipe" %}
+{% for post in recipe_posts %}
     <li>
         <div class="post-card">
         <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
@@ -24,3 +22,7 @@ pagination:
     </li>
 {% endfor %}
 </ol>
+
+<div class="pagination clearfix">
+  <p class="note">Showing all {{ recipe_posts.size }} recipes</p>
+</div>
